@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://viljamipeltola.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Viljami Peltola</title>
+    <meta name="description" content="I love JavaScript.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style type="text/css" rel="stylesheet">
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+@-ms-viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+    html {
+        margin: 0;
+        padding: 0;
+        background-color: #272822;
+    }
+
+    body {
+        width: 100%;
+	height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    div, pre {
+        margin: 0;
+	padding: 0;
+    }
+
+    pre { display: inline; }
+    h1, p, pre { color: #fff; }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid #4b4b4b;
+    }
+
+    a:hover {
+        text-decoration: none;
+        border-bottom: 1px solid #e6d460;
+    }
+
+    input { margin: 0; }
+
+    /* What way of styling would you pick? */
+    .codeBlue { color: #66d9ef;}
+    .codeRed { color: #f9275d;}
+    .codeYellow { color: #e6d460;}
+    </style>
+</head>
+<body>
+<!-- <a href="https://www.codingame.com/profile/ad89321bc149862bac030d9e82e9460f5608342">'Codingame'</a> -->
+<!-- <a href="https://www.schlockmercenary.com/">'Schlock Merkenary'</a> -->
+<pre style="font-size: 34px;">(<span class="codeBlue">function</span>(coder){
+
+    <span class="codeBlue">var</span> name<span class="codeRed"> = </span><span class="codeYellow">'Viljami Peltola'</span>,
+        job<span class="codeRed"> = </span><span class="codeYellow">'Software Gardener'</span>,
+
+        aboutMe<span class="codeRed"> = </span>[
+            <a href="https://www.linkedin.com/in/viljamipeltola/"><span class="codeYellow">'LinkedIn'</span></a>,
+            <a href="http://github.com/viljami"><span class="codeYellow">'Github'</span></a>,
+            <a href="http://twitter.com/viljamipeltola"><span class="codeYellow">'Twitter'</span></a>,
+	    <a href="https://www.instagram.com/viljamipeltola/"><span class="codeYellow">'Instagram'</span></a>,
+        ],
+
+        favorites<span class="codeRed"> = </span>[
+            <a href="https://www.rust-lang.org/"><span class="codeYellow">'Rust'</span></a>,
+            <a href="https://www.typescriptlang.org/"><span class="codeYellow">'TypeScript'</span></a>,
+            <a href="https://www.docker.com/"><span class="codeYellow">'Docker'</span></a>,
+            <a href="https://agilemanifesto.org/"><span class="codeYellow">'Agile'</span></a>,
+        ],
+
+        target<span class="codeRed"> = </span><span class="codeYellow">'Enjoyable software.'</span>
+
+})(window)
+</pre>
+
+<script type="text/javascript">
+(function(){
+    var fontSize = 14;
+    var pre = document.getElementsByTagName('pre')[0];
+
+    var spanify = function(string, what, className){
+        var replacement = what;
+
+	// Lets pretend that this tests for regexp - close enough.
+        if (typeof what === 'object'){
+            var results = what.exec(string);
+            if (results) replacement = results[0];
+        }
+
+        return string.split(what).join('<span class="' + className + '">' + replacement + '</span>');
+    };
+
+    var codeColors = function(element){
+        var content = element.innerHTML || element.innerText;
+        var contentLines = content.split('\n');
+        var results = [];
+
+        contentLines.forEach(function(line){
+            line = spanify(line, 'function', 'codeBlue');
+            line = spanify(line, 'var', 'codeBlue');
+            line = spanify(line, ' = ', 'codeRed');
+            line = spanify(line, /'\w+[\s\.\w,]*'/, 'codeYellow');
+
+            results.push(line);
+        });
+
+        element.innerHTML = results.join('\n');
+    }
+
+    var isTooBig = function(el){
+        var box = el.getBoundingClientRect();
+        return box.width > window.innerWidth || box.height > window.innerHeight;
+    };
+
+    var adjustPreSize = function(){
+
+    };
+
+    var resize = function(){
+        if (isTooBig(pre)) {
+            while(isTooBig(pre) && fontSize > 14) pre.style.fontSize = --fontSize + 'px';
+        } else {
+            while(! isTooBig(pre) || fontSize <= 14) pre.style.fontSize = ++fontSize + 'px';
+            pre.style.fontSize = --fontSize + 'px';
+        }
+    };
+
+    codeColors(pre);
+    window.onresize = resize;
+    resize();
+})();
+</script>
+
+
+</body></html>
