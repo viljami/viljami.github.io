@@ -1,145 +1,176 @@
 <!DOCTYPE html>
-<!-- saved from url=(0027)https://viljamipeltola.com/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <title>Viljami Peltola</title>
-    <meta name="description" content="I love JavaScript.">
+    <meta name="description" content="Software Gardener passionate about Rust, TypeScript, Docker, and Agile development">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#272822">
+    <meta property="og:title" content="Viljami Peltola">
+    <meta property="og:description" content="Software Gardener passionate about Rust, TypeScript, Docker, and Agile development">
 
-    <style type="text/css" rel="stylesheet">
-@viewport{
-    zoom: 1.0;
-    width: extend-to-zoom;
-}
+    <style>
+        :root {
+            --bg-color: #272822;
+            --text-color: #fff;
+            --link-border: #4b4b4b;
+            --link-hover: #e6d460;
+            --code-blue: #66d9ef;
+            --code-red: #f9275d;
+            --code-yellow: #e6d460;
+        }
 
-@-ms-viewport{
-    zoom: 1.0;
-    width: extend-to-zoom;
-}
-    html {
-        margin: 0;
-        padding: 0;
-        background-color: #272822;
-    }
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            height: 100%;
+        }
 
-    body {
-        width: 100%;
-	height: 100%;
-        margin: 0;
-        padding: 0;
-    }
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    div, pre {
-        margin: 0;
-	padding: 0;
-    }
+        div, pre {
+            margin: 0;
+            padding: 0;
+        }
 
-    pre { display: inline; }
-    h1, p, pre { color: #fff; }
+        pre { 
+            display: inline;
+            font-family: 'Fira Code', 'Consolas', monospace;
+        }
 
-    a {
-        color: inherit;
-        text-decoration: none;
-        border-bottom: 1px solid #4b4b4b;
-    }
+        h1, p, pre { 
+            color: var(--text-color);
+        }
 
-    a:hover {
-        text-decoration: none;
-        border-bottom: 1px solid #e6d460;
-    }
+        a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-border);
+            transition: border-color 0.2s ease;
+        }
 
-    input { margin: 0; }
+        a:hover {
+            text-decoration: none;
+            border-bottom: 1px solid var(--link-hover);
+        }
 
-    /* What way of styling would you pick? */
-    .codeBlue { color: #66d9ef;}
-    .codeRed { color: #f9275d;}
-    .codeYellow { color: #e6d460;}
+        .code-blue { color: var(--code-blue); }
+        .code-red { color: var(--code-red); }
+        .code-yellow { color: var(--code-yellow); }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #ffffff;
+                --text-color: #272822;
+                --link-border: #cccccc;
+            }
+        }
     </style>
 </head>
 <body>
-<!-- <a href="https://www.codingame.com/profile/ad89321bc149862bac030d9e82e9460f5608342">'Codingame'</a> -->
-<!-- <a href="https://www.schlockmercenary.com/">'Schlock Merkenary'</a> -->
-<pre style="font-size: 34px;">(<span class="codeBlue">function</span>(coder){
+    <main>
+        <pre id="code-display" style="font-size: 34px;">
+(<span class="code-blue">function</span>(coder){
 
-    <span class="codeBlue">var</span> name<span class="codeRed"> = </span><span class="codeYellow">'Viljami Peltola'</span>,
-        job<span class="codeRed"> = </span><span class="codeYellow">'Software Gardener'</span>,
+    <span class="code-blue">var</span> name<span class="code-red"> = </span><span class="code-yellow">'Viljami Peltola'</span>,
+        job<span class="code-red"> = </span><span class="code-yellow">'Software Gardener'</span>,
 
-        aboutMe<span class="codeRed"> = </span>[
-            <a href="https://www.linkedin.com/in/viljamipeltola/"><span class="codeYellow">'LinkedIn'</span></a>,
-            <a href="http://github.com/viljami"><span class="codeYellow">'Github'</span></a>,
-            <a href="http://twitter.com/viljamipeltola"><span class="codeYellow">'Twitter'</span></a>,
-	    <a href="https://www.instagram.com/viljamipeltola/"><span class="codeYellow">'Instagram'</span></a>,
+        aboutMe<span class="code-red"> = </span>[
+            <a href="https://www.linkedin.com/in/viljamipeltola/"><span class="code-yellow">'LinkedIn'</span></a>,
+            <a href="http://github.com/viljami"><span class="code-yellow">'Github'</span></a>,
         ],
 
-        favorites<span class="codeRed"> = </span>[
-            <a href="https://www.rust-lang.org/"><span class="codeYellow">'Rust'</span></a>,
-            <a href="https://www.typescriptlang.org/"><span class="codeYellow">'TypeScript'</span></a>,
-            <a href="https://www.docker.com/"><span class="codeYellow">'Docker'</span></a>,
-            <a href="https://agilemanifesto.org/"><span class="codeYellow">'Agile'</span></a>,
+        favorites<span class="code-red"> = </span>[
+            <a href="https://www.rust-lang.org/"><span class="code-yellow">'Rust'</span></a>,
+            <a href="https://www.typescriptlang.org/"><span class="code-yellow">'TypeScript'</span></a>,
+            <a href="https://www.docker.com/"><span class="code-yellow">'Docker'</span></a>,
+            <a href="https://agilemanifesto.org/"><span class="code-yellow">'Agile'</span></a>,
         ],
 
-        target<span class="codeRed"> = </span><span class="codeYellow">'Enjoyable software.'</span>
+        target<span class="code-red"> = </span><span class="code-yellow">'Enjoyable software.'</span>
 
 })(window)
-</pre>
+        </pre>
+    </main>
 
-<script type="text/javascript">
-(function(){
-    var fontSize = 14;
-    var pre = document.getElementsByTagName('pre')[0];
+<script>
+const CodeDisplay = {
+    init() {
+        this.pre = document.getElementById('code-display');
+        this.fontSize = 14;
+        this.applyCodeColors();
+        this.setupResizeHandler();
+        this.resize();
+    },
 
-    var spanify = function(string, what, className){
-        var replacement = what;
+    spanify(string, pattern, className) {
+        const isRegExp = pattern instanceof RegExp;
+        const replacement = isRegExp ? (pattern.exec(string) || [''])[0] : pattern;
+        return string.replaceAll(pattern, `<span class="${className}">${replacement}</span>`);
+    },
 
-	// Lets pretend that this tests for regexp - close enough.
-        if (typeof what === 'object'){
-            var results = what.exec(string);
-            if (results) replacement = results[0];
-        }
+    applyCodeColors() {
+        if (!this.pre) return;
+        
+        const content = this.pre.innerHTML;
+        const coloredContent = content
+            .split('\n')
+            .map(line => {
+                return ['function', 'var', 'const', 'let']
+                    .reduce((acc, keyword) => this.spanify(acc, keyword, 'code-blue'), line)
+                    .replace(/ = /g, '<span class="code-red"> = </span>')
+                    .replace(/('[^']*')/g, match => `<span class="code-yellow">${match}</span>`);
+            })
+            .join('\n');
 
-        return string.split(what).join('<span class="' + className + '">' + replacement + '</span>');
-    };
+        this.pre.innerHTML = coloredContent;
+    },
 
-    var codeColors = function(element){
-        var content = element.innerHTML || element.innerText;
-        var contentLines = content.split('\n');
-        var results = [];
-
-        contentLines.forEach(function(line){
-            line = spanify(line, 'function', 'codeBlue');
-            line = spanify(line, 'var', 'codeBlue');
-            line = spanify(line, ' = ', 'codeRed');
-            line = spanify(line, /'\w+[\s\.\w,]*'/, 'codeYellow');
-
-            results.push(line);
-        });
-
-        element.innerHTML = results.join('\n');
-    }
-
-    var isTooBig = function(el){
-        var box = el.getBoundingClientRect();
+    isTooBig() {
+        const box = this.pre.getBoundingClientRect();
         return box.width > window.innerWidth || box.height > window.innerHeight;
-    };
+    },
 
-    var adjustPreSize = function(){
+    resize() {
+        if (!this.pre) return;
 
-    };
+        const minFontSize = 14;
+        const maxFontSize = 48;
 
-    var resize = function(){
-        if (isTooBig(pre)) {
-            while(isTooBig(pre) && fontSize > 14) pre.style.fontSize = --fontSize + 'px';
+        if (this.isTooBig()) {
+            while (this.isTooBig() && this.fontSize > minFontSize) {
+                this.fontSize--;
+                this.pre.style.fontSize = `${this.fontSize}px`;
+            }
         } else {
-            while(! isTooBig(pre) || fontSize <= 14) pre.style.fontSize = ++fontSize + 'px';
-            pre.style.fontSize = --fontSize + 'px';
+            while (!this.isTooBig() && this.fontSize < maxFontSize) {
+                this.fontSize++;
+                this.pre.style.fontSize = `${this.fontSize}px`;
+            }
+            this.fontSize--;
+            this.pre.style.fontSize = `${this.fontSize}px`;
         }
-    };
+    },
 
-    codeColors(pre);
-    window.onresize = resize;
-    resize();
-})();
+    setupResizeHandler() {
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => this.resize(), 100);
+        });
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => CodeDisplay.init());
 </script>
-
 
 </body></html>
